@@ -18,6 +18,7 @@ let package = Package(
     ],
     dependencies: [
       .package(url: "https://github.com/NCN-Mobile-Team/FFmpegKit.git", branch: "main"),
+//      .package(name: "FFmpegKit", path: "../FFmpegKit")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -25,8 +26,6 @@ let package = Package(
             name: "KSPlayer",
             dependencies: [
                 .product(name: "FFmpegKit", package: "FFmpegKit"),
-//                .product(name: "Libass", package: "FFmpegKit"),
-//                .product(name: "Libmpv", package: "FFmpegKit"),
                 "DisplayCriteria",
             ],
             resources: [.process("Metal/Shaders.metal")],
